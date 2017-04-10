@@ -20,7 +20,7 @@ public class DBHelper {
     private static final String jdbcUrl = "jdbc:mysql://localhost:3306/third_login?useUnicode=true&characterEncoding=utf8";
     private static final String clasName = "com.mysql.jdbc.Driver";
     private static final String username = "root";
-    private static final String passwd = "test123";
+    private static final String passwd = "deepter123";
 
     /**
      * 获取数据库连接
