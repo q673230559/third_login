@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config id="renren">
+	<params>
+		<param name="clientId" value="477313" />
+		<param name="apiKey" value="aef84dd098484c3685ece988a5c76dc7" />
+		<param name="secretKey" value="8fcd43279183498dad31768b4b3f4f0d" />
+		<param name="scope" value="" />
+		<param name="redirectUri" value="http://localhost:8080/third_login/renren" />
+		<param name="apiBaseUrl" value=" https://api.renren.com"></param>
+	</params>
+	<authUrl>
+	<![CDATA[
+		https://graph.renren.com/oauth/authorize?client_id=${apiKey}&redirect_uri=${redirectUri}&response_type=code
+	]]>
+	</authUrl>
+	<tokenUrl>
+	<![CDATA[
+		https://graph.renren.com/oauth/token?grant_type=authorization_code&client_id=${apiKey}&redirect_uri=${redirectUri}&client_secret=${secretKey}&code=${code}
+	]]>
+	</tokenUrl>
+	<userInfoApi>
+	<![CDATA[
+		${apiBaseUrl}/v2/user/login/get?access_token=${accessToken}
+	]]>
+	</userInfoApi>
+	<portraitUrlTemplate>
+	<![CDATA[
+		${portrait}
+	]]>
+	</portraitUrlTemplate>
+</config>

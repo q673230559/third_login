@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config id="baidu">
+	<params>
+		<param name="clientId" value="6422351" />
+		<param name="apiKey" value="i3sM3nVMGv46w4eHLgpSQ4GP" />
+		<param name="secretKey" value="Gbw9IjqOVeP63AGQi2O0RaPSkLjMfLto" />
+		<param name="scope" value="" />
+		<param name="redirectUri" value="http://localhost:8080/third_login/baidu" />
+		<param name="apiBaseUrl" value="https://openapi.baidu.com/rest/2.0"></param>
+	</params>
+	<authUrl>
+	<![CDATA[
+		http://openapi.baidu.com/oauth/2.0/authorize?response_type=code&client_id=${apiKey}&redirect_uri=${redirectUri}
+	]]>
+	</authUrl>
+	<tokenUrl>
+	<![CDATA[
+		https://openapi.baidu.com/oauth/2.0/token?grant_type=authorization_code&code=${code}&client_id=${apiKey}&client_secret=${secretKey}&redirect_uri=${redirectUri}
+	]]>
+	</tokenUrl>
+	<userInfoApi>
+	<![CDATA[
+		${apiBaseUrl}/passport/users/getLoggedInUser?access_token=${accessToken}
+	]]>
+	</userInfoApi>
+	<portraitUrlTemplate>
+	<![CDATA[
+		http://tb.himg.baidu.com/sys/portrait/item/${portrait}
+	]]>
+	</portraitUrlTemplate>
+</config>

@@ -1,0 +1,138 @@
+/* 公共 */
+* {
+	margin: 0;
+	padding: 0;
+	font-family: "微软雅黑";
+	font-size: 13px;
+	color: #008eb7;
+}
+
+a {
+	text-decoration: none;
+}
+
+/* login page */
+#banner {
+	width: 100%;
+	height: 50px;
+	background: #00a2ca;
+}
+
+#third_error {
+	padding:10px;
+	border: 1px solid #00a2ca;
+	box-shadow: 0 0 10px #CCCCCC;
+	text-align: center;
+	margin: 100px auto;
+	background: #F8F8F8;
+	width:80%;
+	color: red;
+}
+
+#third_success {
+	width: 80%;
+}
+
+#plat_box {
+	margin: 0 auto;
+	height: 100%;
+	width: 320px;
+}
+
+.plat {
+	width: 80px;
+	line-height: 50px;
+	float: left;
+	text-align: center;
+	font-weight: bold;
+	cursor: default;
+}
+
+.plat > a {
+	color: #FFF;
+}
+
+.plat:hover {
+	background: #008eb7;
+}
+
+#login_box {
+	width: 300px;
+	margin: 50px auto;
+	background: #F8F8F8;
+	padding: 20px;
+	border: 1px solid #00a2ca;
+	box-shadow: 0 0 10px #CCCCCC;
+	border-radius: 5px;
+}
+
+#login_box>div {
+	text-align: center;
+	width: 200px;
+	background: #FFFFFF;
+	margin: 20px auto;
+	border: 1px solid #CCCCCC;
+}
+
+#login_box input[type=text], #login_box input[type=password] {
+	border: none;
+	background: none;
+	color: #666666;
+	width: 130px;
+	line-height: 23px;
+	padding: 1px 5px;
+	outline: none;
+}
+
+#login_box input[type=submit] {
+	border: none;
+	background: #00a2ca;
+	color: #FFFFFF;
+	width: 100%;
+	padding: 4px;
+	font-weight: bold;
+}
+
+#login_box input[type=submit]:hover {
+	box-shadow: 0px 0px 3px #008eb7;
+}
+
+#login_box>div#err_info, #login_box>div#reg {
+	border: none;
+	background: none;
+}
+
+#login_box>div#err_info{
+	color: red;
+}
+
+#login_box>div#reg{
+	text-align:right;
+}
+
+#login_box>div#reg a {
+	
+}
+
+/* user page */
+#user_div {
+	margin-top: 100px;
+	text-align: center;
+}
+
+#user_div > div {
+	margin-top:10px;
+}
+
+#logout {
+	margin-top:15px;
+	background: #00a2ca;
+	padding: 3px 25px;
+	cursor: default;	
+	color: #FFFFFF;
+	border-radius: 3px;
+}
+
+#logout:hover {
+	box-shadow: 0 0 3px #00a2ca;
+}
