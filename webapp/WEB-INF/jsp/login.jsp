@@ -14,7 +14,6 @@
 <script type="text/javascript">
 
 	function authWindow(url, width, height) {
-		
 		var params = {
 			width: width || 600, 
 			height: height || 450,
@@ -57,6 +56,7 @@
 	<div id="plat_box">
 		<div id="baidu" class="plat"><a href="${baiduAuthUrl}">百度</a></div>
 		<div id="renren" class="plat"><a href="javascript:authWindow('${renrenAuthUrl}');">人人</a></div>
+		<%--<div id="renren" class="plat"><a href="${renrenAuthUrl}">人人</a></div>--%>
 		<div id="qq" class="plat" ><a href="javascript:alert('请自己去实现^_^');">QQ</a></div>
 		<div id="wx" class="plat"><a href="javascript:alert('请自己去实现^_^');">微信</a></div>
 	</div>

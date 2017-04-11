@@ -30,24 +30,11 @@ public class ThirdLoginServlet extends HttpServlet {
         System.out.println(code);
         
         User user = OAuthHelper.getUserInfo(plat, code);
-        //System.out.println(user.toString());
-        
-/*        if (user != null) {
-        	System.out.println(user.toString());
-        	User persistenceUser = user;
-            // 写头像文件
-            persistenceUser.setPortraitData(user.getPortraitData());
-            String basePath = request.getServletContext().getRealPath("/portrait");
-            savePortrait(basePath + File.separator + persistenceUser.getId(), persistenceUser);
-            System.out.println(basePath);
-            
-            // 将用户对象存入session，后结操作可根据session中user信息判断是否登录及登录人信息
-            request.getSession().setAttribute("loginUser", persistenceUser);
+        System.out.println(plat+"   comming...");
+        if (user != null) {
+        	User persistenceUser;
 
-            // 用户信息存入session，跳转到用户页
-            toSuccessPage(plat, request, response);
-            
-            User persistenceUser = UserDao.findUserByThirdId(user.getThirdId());
+            persistenceUser = UserDao.findUserByThirdId(user.getThirdId());
             // 先判断third_id对应用户是否已存在
             if (persistenceUser != null) {
                 // 存在表示曾经登录过，更新信息
@@ -62,7 +49,7 @@ public class ThirdLoginServlet extends HttpServlet {
             persistenceUser.setPortraitData(user.getPortraitData());
             String basePath = request.getServletContext().getRealPath("/portrait");
             savePortrait(basePath + File.separator + persistenceUser.getId(), persistenceUser);
-
+            System.out.println(basePath + File.separator + persistenceUser.getId());
             // 将用户对象存入session，后结操作可根据session中user信息判断是否登录及登录人信息
             request.getSession().setAttribute("loginUser", persistenceUser);
 
@@ -71,7 +58,7 @@ public class ThirdLoginServlet extends HttpServlet {
         } else {
             // 授权过程出现错误，进入错误页
             toErrorPage(plat, request, response);
-        }*/
+        }
     }
 
     // 授权成功后的跳转，因为演示程序第三方授权页有几种不同打开方式，成功页也不同，所以在这里根据不同平台分别处理
